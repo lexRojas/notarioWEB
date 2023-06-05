@@ -1,6 +1,6 @@
 <?php 
 
-  require 'database2.php'; 
+  include 'database3.php'; 
 
   $query = "SELECT registro.id_registro as id, registro.registro_descripcion as valor FROM heroku_c9945836774c401.registro;";
 

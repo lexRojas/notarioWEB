@@ -1,5 +1,6 @@
 <?php
-$db=mysqli_connect('us-cdbr-east-06.cleardb.net', 'bbe532e4e582c2','13228bd4','heroku_c9945836774c401');
+$db=mysqli_connect('jtb9ia3h1pgevwb1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', 'vl0v51r0t6ald9dh','nq5d3dq46cc551cj','u67qxne0bs0uujx8');
+//mysqli_options($db, MYSQLI_OPT_SSL_VERIFY_SERVER_CERT, 1);
 
 // Check connection
 if (mysqli_connect_errno()) {
@@ -12,9 +13,9 @@ if (!$db)
   die("mysqli_init failed");
   }
 
-mysqli_ssl_set($db,"key.pem","cert.pem","ca.pem",NULL,NULL); 
+mysqli_ssl_set($db,"rds-combined-ca-bundle.pem","rds-combined-ca-bundle.pem","rds-combined-ca-bundle.pem",NULL,NULL); 
 
-if (!mysqli_real_connect($db,'us-cdbr-east-06.cleardb.net', 'bbe532e4e582c2','13228bd4','heroku_c9945836774c401'))
+if (!mysqli_real_connect($db,'jtb9ia3h1pgevwb1.cbetxkdyhwsb.us-east-1.rds.amazonaws.com', 'vl0v51r0t6ald9dh','nq5d3dq46cc551cj','u67qxne0bs0uujx8'))
   {
   die("Connect Error: " . mysqli_connect_error());
   }
