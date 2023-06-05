@@ -1,7 +1,7 @@
 
 <?php 
 
-  require 'database.php';
+  include 'database_aws.php';
 
   $id_registro = $_POST['id_acto'];
 
