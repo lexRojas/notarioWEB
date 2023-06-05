@@ -1,5 +1,5 @@
 
-$(function(){
+$(document).ready(function() {
     console.log('Hola Gigo 0');  
     $.ajax({
         type: "GET",
@@ -67,6 +67,19 @@ $(function(){
             }
         });
     }
+
+$('#form_calculadora').submit(function (e) { 
+    e.preventDefault();
+
+    const postData = {
+        acto: $("#actos").prop('value'),
+        monto: $('#monto').val()
+      };
+
+    console.log(postData);
+
+    
+});
 
 
 }); 

@@ -31,7 +31,7 @@
                     </nav>   
                 </div> 
                 <div class="card-body tarjeta p-4">
-                    <form class="row g-3">
+                    <form class="row g-3" id="form_calculadora">
                         <div class="col-md-12" >
                             <label class="form-label" for="registros"> Seleccione Registro: </label>
                             <select class="form-control" id="registros"> 
@@ -49,7 +49,9 @@
                             <input type="text" class="form-control" aria-label="Colones" id="monto">
                             <span class="input-group-text">.00</span>
                          </div>
-
+                         <div class="col-md-12" >
+                            <button class="btn btn-primary" id="btn_calcular"> Calcular </button>
+                        </div>    
                     </form>
                 </div> 
             </div>
