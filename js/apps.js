@@ -5,7 +5,7 @@ $(function(){
         type: "GET",
         url: "php/get_registros.php",
         success: function (response) {
-            console.log('response'.response);
+           
             if(!response.error){
 
                 let registros = JSON.parse(response);
