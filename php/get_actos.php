@@ -5,7 +5,7 @@
 
   $id_registro = $_POST['id_acto'];
 
-  $query = 'select id_acto as id, acto_descripcion as valor from notario.acto a inner join notario.registro_acto ra on a.id_acto  = ra.acto_id_acto where ra.registro_id_registro ='. $id_registro ;
+  $query = 'select id_acto as id, acto_descripcion as valor from acto a inner join registro_acto ra on a.id_acto  = ra.acto_id_acto where ra.registro_id_registro ='. $id_registro ;
 
   $result  = mysqli_query($db,$query);
 

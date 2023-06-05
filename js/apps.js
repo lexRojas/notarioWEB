@@ -1,11 +1,11 @@
 
 $(function(){
-    console.log('Hola Gigo');  
+    console.log('Hola Gigo 0');  
     $.ajax({
         type: "GET",
         url: "php/get_registros.php",
         success: function (response) {
-
+            console.log('response'.response);
             if(!response.error){
 
                 let registros = JSON.parse(response);

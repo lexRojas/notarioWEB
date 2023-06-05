@@ -3,7 +3,7 @@
 
   require 'database.php';
 
-  $query = "select id_registro as id,registro_descripcion as valor from notario.registro";
+  $query = "select id_registro as id,registro_descripcion as valor from registro";
 
   $result  = mysqli_query($db,$query);
 
