@@ -1,6 +1,6 @@
 <?php 
 
-  include 'database3.php'; 
+  include 'database_aws.php'; 
 
   $query = 'SELECT registro.id_registro as id, registro.registro_descripcion as valor FROM u67qxne0bs0uujx8.registro;';
 
