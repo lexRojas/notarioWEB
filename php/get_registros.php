@@ -2,9 +2,16 @@
 
   include 'database3.php'; 
 
-  $query = "SELECT registro.id_registro as id, registro.registro_descripcion as valor FROM heroku_c9945836774c401.registro;";
+  $query = 'SELECT registro.id_registro as id, registro.registro_descripcion as valor FROM u67qxne0bs0uujx8.registro;';
+
+  print_r($query );
 
   $result  = mysqli_query($db,$query);
+
+  print_r($db);
+
+  print_r($result);
+
 
   if(!$result) {
       die('Query Failed'. mysqli_error($db));
