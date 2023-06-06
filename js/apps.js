@@ -68,18 +68,47 @@ $(document).ready(function() {
         });
     }
 
-$('#form_calculadora').submit(function (e) { 
-    e.preventDefault();
 
-    const postData = {
-        acto: $("#actos").prop('value'),
-        monto: $('#monto').val()
-      };
+    $(document).on( 'click', '#btn_calcular', function(){
 
-    console.log(postData);
+        console.log('primer llamado \n');
+  
+        $.ajax({
+            type: "POST",
+            url: "php/get_monto_timbres.php",
+            //url: "php/getmonto.php",
+            dataType: "JSON",
+            data: {
+                id_acto: $("#actos").prop('value'),
+                monto:$('#monto').val()
+            },
+            success: function (response) {
+                //const tasks = JSON.parse(response);
+                const tasks = response;
+                let template = '';
+                tasks.forEach(task => {
+                  template += `
+                    <tr taskId="${task.id}">
+                        <td>${task.id}</td>
+                        <td>${task.descripcion}</td>
+                        <td>${task.tarifa}</td>
+                    </tr>
+                        `
+                });
+                $('#tasks').html(template);
 
-    
-});
+            }
+        });
+
+
+    });
+
+
+
+    $('#form_calculadora').submit(function (e) { 
+        e.preventDefault();
+
+    });
 
 
 }); 
