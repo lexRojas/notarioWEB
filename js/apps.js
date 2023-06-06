@@ -87,11 +87,14 @@ $(document).ready(function() {
                 const tasks = response;
                 let template = '';
                 tasks.forEach(task => {
+
+                  let monto_moneda = new Intl.NumberFormat().format(task.tarifa);
+                  //let monto_moneda =task.tarifa;  
                   template += `
                     <tr taskId="${task.id}">
                         <td>${task.id}</td>
                         <td>${task.descripcion}</td>
-                        <td>${task.tarifa}</td>
+                        <td class="number" >${monto_moneda}</td>
                     </tr>
                         `
                 });

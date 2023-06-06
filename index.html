@@ -18,7 +18,15 @@
     .fondo{
          background-color: rgb(201, 201, 201);   
     }
+    .number {
+    text-align: right;
+    }   
 
+    .table_head {
+    text-align: center;
+    font-weight: bold;
+    }   
+    
 </style>
 </head>
 <body>
@@ -46,7 +54,7 @@
                         </div>    
                         <div class="input-group md-12">
                             <span class="input-group-text"> Monto</span>
-                            <input type="text" class="form-control" aria-label="Colones" id="monto">
+                            <input type="number" class="form-control" aria-label="Colones" id="monto">
                             <span class="input-group-text">.00</span>
                          </div>
                          <div class="col-md-12" >
@@ -63,9 +71,9 @@
             <table class="table table table-striped table-bordered table-md">
               <thead>
                 <tr>
-                  <td class="td-3">Id</td>
-                  <td class="td-6">Tarifa</td>
-                  <td class="td-3">Monto</td>
+                  <td class="table_head">Id</td>
+                  <td class="table_head">Tarifa</td>
+                  <td class="table_head">Monto</td>
                 </tr>
               </thead>
               <tbody id="tasks"></tbody>
