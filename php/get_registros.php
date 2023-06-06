@@ -1,6 +1,6 @@
 <?php 
 
-  include 'database_aws.php'; 
+  require 'database_aws.php'; 
 
   $query = 'SELECT registro.id_registro as id, registro.registro_descripcion as valor FROM registro;';
 

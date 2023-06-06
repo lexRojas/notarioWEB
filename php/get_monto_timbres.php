@@ -5,6 +5,12 @@
     $id_acto = $_POST['id_acto'];
     $monto = $_POST['monto'];
 
+
+    if ((!is_numeric($monto)) || ($monto < 0 )){
+      $monto = 0;
+    }
+
+
     $query = 'select * from acto a inner join tarifario t ON a.id_acto = t.acto_id_acto inner join timbre t2 on t.timbre_id_timbre  = t2.id_timbre  where a.id_acto = '.$id_acto.' order by t2.id_timbre';
 
     $result  = mysqli_query($db,$query);
